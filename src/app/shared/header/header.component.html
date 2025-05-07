@@ -1,0 +1,85 @@
+
+<div id="header">
+    <div class="d-flex flex-row align-items-center justify-content-between d-lg-none px-3 py-2 " >
+        <div><i class="bi bi-x"></i></div>
+        <div><img src="https://demo.dashboardpack.com/architectui-angular-pro/logo-inverse.png" class="img-fluid" alt=""></div>
+        <div><button type="button" class="btn btn-primary px-3 py-1 position-relative" data-bs-toggle="collapse" data-bs-target="#collapseRight"><i class="bi bi-three-dots-vertical"></i></button></div>
+    </div>
+    <div class="collapse position-absolute container-fluid mt-4" id="collapseRight" >
+        <div class="card card-body d-flex justify-content-between flex-row rounded-pill" >
+            <div id="search" class="container-fluid position-relative " [class]="{'isActiveSearch':isActiveSearch}">
+                <input type="text" name="" id="" class="form-control rounded-pill z-1 " placeholder="Type to search" >
+                <i class="bi bi-search py-2 px-3 rounded-circle z-3 position-absolute"  (click)="checkActive()"></i>
+            </div>
+            <div >
+                <button type="button" class="btn "  data-bs-toggle="collapse" data-bs-target="#collapseHeaderList">
+                    <i class="bi bi-list py-2 px-3 rounded-circle" id="header-list"></i>
+                </button>
+                <div class="collapse position-absolute rounded" id="collapseHeaderList">
+                    <div class="card card-body text-center p-0">
+                        <div class="grid-header px-3 py-2 text-muted">
+                            <h5 class="fs-5">Grid Dashboard</h5>
+                            <h6 class="fs-6 ">Easy grid navigation inside dropdowns</h6>
+                        </div>
+                       
+                        <div class="row m-0">
+                            <div class="col-12 col-sm-6 col-lg-4 p-2 py-3 border d-flex flex-column"><i class="bi bi-gear d-none d-lg-block"></i>Automation</div>
+                            <div class="col-12 col-sm-6 col-lg-4 p-2 py-3 border d-flex flex-column align-items-center"><i class="bi bi-gear-wide d-none d-lg-block"></i>Reports</div>
+                            <div class="col-12 col-sm-6 col-lg-4 p-2 py-3 border d-flex flex-column align-items-center"><i class="bi bi-gear-wide-connected d-none d-lg-block"></i>Contents</div>
+                            <div class="col-12 col-sm-6 col-lg-4 p-2 py-3 border d-flex flex-column align-items-center"><i class="bi bi-sliders d-none d-lg-block"></i>Settings</div>
+                            <div class="col-12 col-sm-6 col-lg-4 p-2 py-3 border d-flex flex-column align-items-center"><i class="bi bi-sliders2 d-none d-lg-block"></i>Activity</div>
+                            <div class="col-12 col-sm-6 col-lg-4 p-2 py-3 border d-flex flex-column align-items-center"><i class="bi bi-sliders2-vertical d-none d-lg-block"></i>Contacts</div>
+                        </div>
+                    </div>
+                  </div>
+                  
+            </div>
+            <div id="profile">
+                <button class="btn p-1 position-relative" type="button" data-bs-toggle="collapse" data-bs-target="#collapseProfile" aria-expanded="false" aria-controls="collapseExample">
+                    <img class="img-fluid rounded-circle" src="https://w7.pngwing.com/pngs/184/113/png-transparent-user-profile-computer-icons-profile-heroes-black-silhouette-thumbnail.png" alt="">
+                </button>
+                <div class="collapse position-absolute" id="collapseProfile">
+                    <div class="card card-body p-0">
+                        <div id="profile-description" class="d-flex justify-content-between align-items-center p-3">
+                            <div class="d-flex justify-content-start align-items-center">
+                                <img class="img-fluid rounded-circle" src="https://w7.pngwing.com/pngs/184/113/png-transparent-user-profile-computer-icons-profile-heroes-black-silhouette-thumbnail.png" alt="">
+                                <div class="px-2  text-muted">
+                                    <p class="fw-bold  m-0">Jhon Doe</p>
+                                    <p class=" m-0">A short profile description</p>
+                                </div>
+                            </div>
+                           
+                            <div>
+                                <button type="button" class="btn btn-primary rounded-pill">Logout</button>
+                            </div>
+                        </div> 
+                        <div>
+                            <ul class="p-3 overflow-auto ">
+                                <li ><p class="fw-semibold text-primary">ACTIVITY</p></li>
+                                <li><p class="d-flex justify-content-between"><span>Chat</span><span class="badge text-bg-secondary">4</span></p></li>
+                                <li><p>Recover Password</p></li>
+                                <li ><p class="fw-semibold  text-primary">MY ACCOUNT</p></li>
+                                <li><p>Settings</p></li>
+                                <li><p>Messages</p></li>
+                                <li><p>Logs</p></li>
+                            </ul>
+                        </div> 
+                        <div class="row justify-content-between align-items-center  border third-section text-nowrap p-0 m-0">
+                            <div class="col-12 col-sm-6 pt-2  border d-flex align-items-center flex-column ">
+                              <i class="bi bi-inbox d-none d-lg-block" ></i>
+                              <p>Message Inbox</p>
+                            </div>
+                            <div class="col-12 col-sm-6 pt-2 border d-flex align-items-center flex-column ">
+                              <i class="bi bi-ticket  d-none d-lg-block"></i>
+                              <p>Support Ticket</p>
+                            </div>
+                        </div>  
+                        <div class="d-flex justify-content-center py-3">
+                            <a href="#" class="btn btn-primary">Open Messages</a>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+      </div>
+
+</div>

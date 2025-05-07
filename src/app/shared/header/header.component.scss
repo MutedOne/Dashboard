@@ -1,0 +1,122 @@
+
+#header{
+  
+
+    background-color: #fafbfc;
+    @keyframes animateforward {
+        from {
+            top: 0px;
+            left: 0;
+        }
+        to {
+            top: 0px;
+            right: 10px;
+        }
+    }
+    @keyframes animatebackward {
+        from {
+            top: 0px;
+            right: 0;
+        }
+        to {
+            top: 0px;
+            left: 10px;
+        }
+    }
+    #collapseRight{
+        #search{
+          
+            &:not(.isActiveSearch){
+               input{
+                 display: block;
+               }
+               i{
+                    animation: animateforward 0s ease forwards;
+               }
+            }
+            &.isActiveSearch{
+                i{
+                 animation: animatebackward 0s ease forwards;
+                } 
+                input{
+                    display: none;
+               
+                }
+            
+             }
+            i{
+                background-color: rgba(0, 0, 0, 0.06);
+                transform: scaleX(-1);
+               
+            }
+            input{
+                display: none;
+            }
+           
+        }
+        .card{
+            width: 90%;
+            margin: auto;
+        }
+        #header-list{
+            background-color: rgba(0, 0, 0, 0.06);
+           
+        }
+        #collapseHeaderList{
+      
+            right: 0;
+            width: 25rem;    
+            .grid-header{
+                background-image: linear-gradient(rgba(215, 52, 175, 0.5), rgba(176, 67, 125, 0.5)),url("https://demo.dashboardpack.com/architectui-angular-pro/abstract1.jpg");
+            }
+            i{
+                font-size: 3rem;
+            }
+             
+            @media screen and (max-width: 992px) {
+                top: 200%;
+                left: 0;
+                width: 90vw;
+                
+            }
+        }
+        #profile{
+            #collapseProfile{
+                right: 0;
+                width: 25rem;
+                @media screen and (max-width: 992px) {
+                    top: 200%;
+                    left: 0;
+                    width: 90vw;
+                    
+                }
+            }
+            ul{
+                height: 10rem;
+                list-style: none;
+            }
+            img{
+                height: 25px;
+                width: 28px;
+               
+            }
+            #profile-description{
+                background-image: linear-gradient(rgba(22, 170, 255, 0.4), rgba(22, 170, 255, 0.4)),
+                url("https://demo.dashboardpack.com/architectui-angular-pro/abstract3.jpg");
+            }
+    
+            .third-section{
+                i{
+                    font-size: xx-large;
+                }
+             
+            }
+         
+        }
+        @media screen and (min-width: 992px) {
+            display: none;
+        }
+    }
+    
+   
+}
