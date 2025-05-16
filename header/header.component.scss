@@ -5,23 +5,25 @@
     background-color: #fafbfc;
     @keyframes animateforward {
         from {
-            top: 0;
-            left: 0;
+            top: calc(clamp(0px, (100vw - 572px) * 999, 4px));
+            right:100px;
         }
         to {
             transform: scaleX(1);
-            top: 0;
+            top: calc(clamp(0px, (100vw - 572px) * 999, 4px));
+
             right: 0;
+         
         }
     }
     @keyframes animatebackward {
         from {
-            top: 0px;
-            right: 0;
+            top: 4px;
+            left: 100px; 
         }
         to {
-            top: 0px;
-            left: 10px;
+            top: 4px;
+            left: 0;
         }
     }
     #collapseRight{
@@ -55,26 +57,24 @@
                     }
                   
                 }
-              
-                
             }
             
         }
       
         #search{
-          
+        
             &:not(.isActiveSearch){
                input{
                  display: block;
                }
                i{
-                    animation: animateforward 0s ease forwards;
+                    animation: animateforward .5s ease forwards;
                }
             }
             &.isActiveSearch{
                 i{
-                 animation: animatebackward 0s ease forwards;
-                } 
+                    animation: animatebackward .5s ease forwards;
+                }  
                 input{
                     display: none;
                
@@ -86,15 +86,11 @@
                 transform: scaleX(-1);
                
             }
-            // input{
-            //     display: none;
-            // }
+            
             @media screen and (max-width: 576px) {
                 input{
                     width: 85vw;
                 }
-              
-                
             }
         }
      
