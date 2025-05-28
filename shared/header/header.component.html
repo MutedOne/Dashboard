@@ -1,0 +1,171 @@
+
+<div id="header"  >
+    <div class="d-flex flex-row align-items-center justify-content-between  px-3 py-3 d-lg-none" >
+        <div><button type="button" class="btn" (click)="toggleSidenavmobile()"><i class="bi bi-x " ></i></button></div>
+        
+        <div><img src="https://demo.dashboardpack.com/architectui-angular-pro/logo-inverse.png" class="img-fluid" alt=""></div>
+        <div><button type="button" class="btn btn-primary px-3 py-1 position-relative " data-bs-toggle="collapse" data-bs-target="#collapseRight"><i class="bi bi-three-dots-vertical"></i></button></div>
+      
+    </div>
+    <div class="collapse  container-fluid pe-0" id="collapseRight" [class]="{'show':isActiveGroupNav,'onSideOpen':checkToggleMainSidenav()}">
+        <div class="card card-body d-flex flex-row p-2" id="groupCard" >
+            <div id="search" class="position-relative me-auto d-flex align-items-center" [class]="{'isActiveSearch':isActiveSearch}">
+                <input type="text" name="" id="" class="form-control rounded-pill z-1 fs-6" placeholder="Type to search" >
+                <i class="bi bi-search rounded-pill z-3 position-absolute fs-6 px-3 py-2 text-primary" (click)="checkActive()"></i>
+            </div>
+            <div id="controlButtons" class="d-flex align-items-center" [class]="{'isActiveSearch':isActiveSearch}">
+             
+                <button type="button" class="btn rounded-circle px-3 py-2 " style="background-color:rgba(0, 123, 255, 0.2);"   data-bs-toggle="collapse" data-bs-target="#collapseHeaderList">
+                    <i class="bi bi-list icon fs-6 text-primary" ></i>
+                </button>
+                <button type="button" class="btn rounded-circle px-3 py-2 mx-1" style="background-color:rgb(217, 37, 80,0.2)"  data-bs-toggle="collapse" data-bs-target="#collapseNotificationList">
+                    <i class="bi bi-bell   fs-6 text-danger" ></i>
+                </button>
+                <button type="button" class="btn rounded-circle px-3 py-2 " style="background-color:rgb(108, 117, 125,0.2)" data-bs-toggle="collapse" data-bs-target="#collapseLanguge">
+                    <i class="bi bi-globe fs-6 text-secondary"></i>
+                </button>
+                <button type="button" class="btn rounded-circle px-3 py-2 mx-1" style="background-color:rgb(25, 135, 84,0.2)" data-bs-toggle="collapse" data-bs-target="#collapseActivity">
+                    <i class="bi bi-pie-chart   fs-6 text-success" ></i>
+                </button>
+                <div class="vr ms-3"></div>
+                <button class="btn position-relative  px-3 py-2 m-0 rounded-circle" type="button" data-bs-toggle="collapse" data-bs-target="#collapseProfile" aria-expanded="false" aria-controls="collapseExample">
+                    <div id="profileImage" class="">
+                        <img class="img-fluid  " src="https://w7.pngwing.com/pngs/184/113/png-transparent-user-profile-computer-icons-profile-heroes-black-silhouette-thumbnail.png" alt="">
+                    </div>
+                </button>
+            </div>
+            <div id="gridDashboards" >
+                
+                <div class="collapse position-absolute rounded collapseList m-auto" id="collapseHeaderList">
+                    <div class="card card-body text-center p-0">
+                        <div class="grid-header p-3 text-muted">
+                            <h5 class="fs-5">Grid Dashboard</h5>
+                            <h6 class="fs-6 ">Easy grid navigation inside dropdowns</h6>
+                        </div>
+                       
+                        <div class="row m-0 ">
+                            <div class="col-12 col-sm-6 col-lg-4 p-2 py-3 border d-flex flex-column "><i class="bi bi-gear d-none d-lg-block fs-3"></i>Automation</div>
+                            <div class="col-12 col-sm-6 col-lg-4 p-2 py-3 border d-flex flex-column align-items-center"><i class="bi bi-gear-wide d-none d-lg-block fs-3"></i>Reports</div>
+                            <div class="col-12 col-sm-6 col-lg-4 p-2 py-3 border d-flex flex-column align-items-center"><i class="bi bi-gear-wide-connected d-none d-lg-block fs-3"></i>Contents</div>
+                            <div class="col-12 col-sm-6 col-lg-4 p-2 py-3 border d-flex flex-column align-items-center"><i class="bi bi-sliders d-none d-lg-block  fs-3 "></i>Settings</div>
+                            <div class="col-12 col-sm-6 col-lg-4 p-2 py-3 border d-flex flex-column align-items-center"><i class="bi bi-sliders2 d-none d-lg-block fs-3"></i>Activity</div>
+                            <div class="col-12 col-sm-6 col-lg-4 p-2 py-3 border d-flex flex-column align-items-center"><i class="bi bi-sliders2-vertical d-none d-lg-block fs-3"></i>Contacts</div>
+                        </div>
+                        <div class="card-footer text-center py-3 px-2 bg-white">
+                            <button type="button" class="btn btn-primary ">Follow ups</button>
+                           
+                        </div>
+                    </div>
+                  </div>
+                  
+            </div>
+            <div id="notification">
+              
+                <div class="collapse position-absolute rounded collapseList m-auto" id="collapseNotificationList">
+                    <div class="card card-body text-center p-0">
+                        <div class="grid-header px-3 py-2 text-muted">
+                            <h5 class="fs-5">Notifications</h5>
+                            <h6 class="fs-6 ">You have 21 unread messages</h6>
+                        </div>
+                       
+                        <div>
+                            Soon to develop
+                        </div>
+                    </div>
+                  </div>
+                  
+            </div>
+            <div id="language">
+              
+                <div class="collapse position-absolute rounded collapseList m-auto" id="collapseLanguge">
+                    <div class="card card-body text-center p-0">
+                        <div class="grid-header px-3 py-2 text-muted">
+                            <h5 class="fs-5">Choose Language</h5>
+                         
+                        </div>
+                        <div>
+                            <ul class="overflow-y-auto text-start">
+                                <li ><p class="fw-semibold text-primary">Popular language</p></li>
+                                <li><p class="d-flex "><span ><i class="bi bi-flag-fill"></i></span><span class="ps-2">Philippines</span></p></li>
+                                <li><p>Recover Password</p></li>
+                                <li ><p class="fw-semibold  text-primary">OTHERS</p></li>
+                                <li><p>Germany</p></li>
+                                <li><p>Italy</p></li>
+                            </ul>
+                        </div> 
+                    </div>
+                  </div>
+                  
+            </div>
+            <div id="activity">
+               
+                <div class="collapse position-absolute rounded collapseList m-auto" id="collapseActivity">
+                    <div class="card card-body text-center p-0 ">
+                        <div class="grid-header px-3 py-2 text-muted">
+                            <h5 class="fs-5">Users Online</h5>
+                            <h6 class="fs-6 ">Recent Account Activity Overview</h6>
+                        </div>
+                        <div class="rounded-circle"><i class="bi bi-people-fill fs-1"></i></div>
+                        
+                        <p class="fs-1">344k</p>
+                        <p class="fs-4 text-muted">Profile views since last login</p>
+                            
+                        <p class="fs-4 text-danger">176% chart</p>
+                        
+                        <div class="card-footer text-center py-3 px-2 bg-white">
+                            <button type="button" class="btn btn-warning rounded-pill"> Refresh List</button>
+                           
+                        </div>
+                    </div>
+                  
+                  </div>
+                  
+            </div>
+        
+            <div id="profile" class="d-flex align-items-center">
+               
+                <div class="collapse position-absolute collapseList m-auto" id="collapseProfile">
+                    <div class="card card-body p-0">
+                        <div id="profile-description" class="d-flex justify-content-between align-items-center p-3">
+                            <div class="d-flex justify-content-start align-items-center">
+                                <img class="img-fluid rounded-circle" src="https://w7.pngwing.com/pngs/184/113/png-transparent-user-profile-computer-icons-profile-heroes-black-silhouette-thumbnail.png" alt="">
+                                <div class="px-2  text-muted">
+                                    <p class="fw-bold  m-0">Jhon Doe</p>
+                                    <p class=" m-0">A short profile description</p>
+                                </div>
+                            </div>
+                           
+                            <div>
+                                <button type="button" class="btn btn-primary rounded-pill">Logout</button>
+                            </div>
+                        </div> 
+                        <div>
+                            <ul class="p-3 overflow-auto ">
+                                <li ><p class="fw-semibold text-primary">ACTIVITY</p></li>
+                                <li><p class="d-flex justify-content-between"><span>Chat</span><span class="badge text-bg-secondary">4</span></p></li>
+                                <li><p>Recover Password</p></li>
+                                <li ><p class="fw-semibold  text-primary">MY ACCOUNT</p></li>
+                                <li><p>Settings</p></li>
+                                <li><p>Messages</p></li>
+                                <li><p>Logs</p></li>
+                            </ul>
+                        </div> 
+                        <div class="row justify-content-between align-items-center  border third-section text-nowrap p-0 m-0">
+                            <div class="col-12 col-sm-6 pt-2  border d-flex align-items-center flex-column ">
+                              <i class="bi bi-inbox d-none d-lg-block" ></i>
+                              <p>Message Inbox</p>
+                            </div>
+                            <div class="col-12 col-sm-6 pt-2 border d-flex align-items-center flex-column ">
+                              <i class="bi bi-ticket  d-none d-lg-block"></i>
+                              <p>Support Ticket</p>
+                            </div>
+                        </div>  
+                        <div class="d-flex justify-content-center py-3">
+                            <a href="#" class="btn btn-primary">Open Messages</a>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+      </div>
+
+</div>
