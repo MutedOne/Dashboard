@@ -29,7 +29,7 @@
     #collapseRight{
         z-index: 2;
         position: absolute;
-        
+        padding-left: 5rem;
         #groupCard{
             border-radius: 50rem; 
             
@@ -201,7 +201,6 @@
         @media screen and (min-width: 992px) {
             position: relative;
             margin-top: 0;
-             padding-left: 18.5rem;
             z-index: 1;
             #groupCard{
                 
@@ -213,9 +212,7 @@
                 box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03), 0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.03), 0 0.25rem 0.53125rem rgba(4, 9, 20, 0.05), 0 0.125rem 0.1875rem rgba(4, 9, 20, 0.03);
             }
             
-            &:not(.onSideOpen){
-                padding-left: 5rem;
-                }
+         
             }
         
         

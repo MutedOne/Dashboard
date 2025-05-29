@@ -1,9 +1,10 @@
 import { Component, OnInit} from '@angular/core';
 import { ToogleSignals } from '../../signals/toggleSignals';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-sidenav',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './sidenav.component.html',
   styleUrl: './sidenav.component.scss'
 })
