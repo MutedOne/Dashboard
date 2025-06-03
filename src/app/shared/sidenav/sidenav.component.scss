@@ -94,7 +94,18 @@
         }
    
    }
-    &:not(.sidenav-collapse){
+   
+    
+  
+   @media screen and (min-width: 992px) {
+    top: 0;
+    z-index: 4;
+    
+   }
+   
+   @media screen and (min-width: 992px) {
+    display: block;
+        &:not(.sidenav-collapse){
          width: 80px;
         animation: animatebackward .5s ease forwards;
          #logoFrame{
@@ -133,18 +144,10 @@
                     display: block;
                 }
             }
+            
          }
+          
     }
-  
-   @media screen and (min-width: 992px) {
-    top: 0;
-    z-index: 4;
-    
-   }
-   
-   @media screen and (max-width: 992px) {
-    display: block;
-    
    }
 
 }
