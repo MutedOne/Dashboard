@@ -5,10 +5,10 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 
 
 ## Technology use
-Angular 19
-Bootstrap 5 and icons
-Chartjs
-SASS CSS
+Angular 19 <br>
+Bootstrap 5 and icons <br>
+Chartjs <br>
+SASS CSS <br>
 
 
 
