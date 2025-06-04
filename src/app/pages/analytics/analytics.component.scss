@@ -5,4 +5,10 @@
     #mainContent{
         background-color: rgba(241, 244, 247, 1);
     }
+    #techSupport{
+        .carousel-indicators button{
+            height: 10px;
+            width: 10px;
+        }
+    }
 }
