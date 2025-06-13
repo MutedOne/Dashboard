@@ -1,7 +1,7 @@
 import { AfterViewInit, Component } from '@angular/core';
 import { Chart, ChartItem, ChartTypeRegistry, registerables } from 'chart.js';
 import { Charts } from '../../interface/charts';
-import { accountsChartData, salesChartData, ticketsChartData } from '../../test-data/chartData';
+import { accountsChartData, salesChartData,sales2ChartData,sales3ChartData,sales4ChartData,sales5ChartData, ticketsChartData } from '../../test-data/chartData';
 
 @Component({
   selector: 'app-analytics',
@@ -18,6 +18,11 @@ export class AnalyticsComponent implements AfterViewInit{
     this.lineChart(accountsChartData);
     this.lineChart(salesChartData);
     this.lineChart(ticketsChartData);
+
+    this.lineChart(sales2ChartData);
+    this.lineChart(sales3ChartData);
+    this.lineChart(sales4ChartData);
+    this.lineChart(sales5ChartData);
   }
 
   
